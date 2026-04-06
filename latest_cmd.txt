@@ -1,0 +1,1 @@
+python3.10 train_node_sacrf.py --log_interval 2 --loader cluster --num_clusters 30  --init_lr 0.001 --hidden_dim 64 --dataset ogbn-arxiv --embed_feat --seed 42 --c_entropy 0.1 --epoches 500 --name_acc OGBN_arxiv_TEST --optim adam --clip 10. --weight_decay 0.0 --pseudo 0 --damping 0.8 --rewire 0

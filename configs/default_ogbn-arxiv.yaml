@@ -1,0 +1,60 @@
+dataset: "ogbn-arxiv"
+
+# Learning rate and weight decay
+init_lr: 0.001
+weight_decay: 5e-4
+
+# Log settings
+log_interval: 10
+log_dir: "experiments" 
+
+# Checkpoint settings
+checkpoint_interval: 20
+checkpoint_dir: "checkpoints"
+
+# Total number of epochs 
+epoches: 1000
+# Number of experiment repetition 
+max_runs: 20
+# Seed value for PRNG
+seed: 1234
+
+
+# Batch size (total nodes = bs*num_clusters)
+bs: 1
+# Gradient clipping value
+clip: 2.0
+
+# Number of Mean-field iterations
+crf_it: 5
+# Number of heads in MHSA
+mhsa_heads: 2
+# Hidden dimension used in MHSA and other MLP
+hidden_dim: 256
+# Value of dropout in attention calculation
+attn_dropout: 0.5
+# General dropout (MLP, etc..)
+dropout: 0.5
+
+
+# Mini-batch loader
+loader: cluster
+
+# Number of sub-graphs for RandomLoader
+num_subgraphs: 20
+num_subgraphs_test: 20
+
+# Number of neighbours sampled in NeighbourLoader
+sample_neigh: 3
+
+# Number of  training/testing clusters for ClusterLoader 
+num_clusters: 30
+num_clusters_test: 15
+
+# Loading additional node feature ebmeddings (from GIANT)
+embed_feat: True
+
+# Number of workers for multi-threading in loaders
+j: 12
+
+vis: False
